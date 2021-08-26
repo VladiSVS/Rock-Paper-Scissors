@@ -1,17 +1,21 @@
+const rockImg = `<img style="background: red; border: 0.5em solid red;" src="assets/img/hand-rock-regular.svg">`
+const paperImg = `<img style="background: green; border: 0.5em solid green;" src="assets/img/hand-paper-regular.svg">`
+const scissorsImg = `<img style="background: orange; border: 0.5em solid orange;" src="assets/img/hand-scissors-regular.svg">`
+
 let iRounds = 0
 let uScore = 0
 let cScore = 0
 
 function rockFunc() {
-    playBegin(1)
+    playBegin('rock')
 }
 
 function paperFunc() {
-    playBegin(2)
+    playBegin('paper')
 }
 
 function scissorsFunc() {
-    playBegin(3)
+    playBegin('scissors')
 }
 
 function playBegin(x) {
@@ -24,13 +28,10 @@ function playBegin(x) {
     let radioTwenty = document.getElementById("radioTwenty")
     let totalAttempts = document.getElementById("totalAttempts")
     let resultAttempt = document.getElementById("attempt")
+    let commitText = document.getElementById("commitText")
 
     let userScore = document.getElementById("userScore")
     let compScore = document.getElementById("compScore")
-
-    let rock = document.getElementById("rock")
-    let paper = document.getElementById("paper")
-    let scissors = document.getElementById("scissors")
 
     function checkRounds() {
         if (radioFive.checked) {
@@ -60,43 +61,51 @@ function playBegin(x) {
     }
 
     compRandomRes = () => {
-        return Math.floor(Math.random() * 3) + 1
+        let wordArray = ['rock', 'paper', 'scissors'],
+            randomNumber = Math.floor(Math.random() * wordArray.length),
+            word = wordArray[randomNumber];
+
+        return word;
     }
 
-    let compAnswer = compRandomRes()
+    let compAns = compRandomRes()
 
     compColor = () => {
-        if (compAnswer == 1) {
-            rock.style.borderColor = "red"
-            paper.style.borderColor = "black"
-            scissors.style.borderColor = "black"
-        } else if (compAnswer == 2) {
-            paper.style.borderColor = "green"
-            rock.style.borderColor = "black"
-            scissors.style.borderColor = "black"
-        } else if (compAnswer == 3) {
-            scissors.style.borderColor = "orange"
-            paper.style.borderColor = "black"
-            rock.style.borderColor = "black"
+        if (compAns === 'rock') {
+            commitText.innerHTML = `${rockImg} Robocop shows`
+        } else if (compAns === 'paper') {
+            commitText.innerHTML = `${paperImg} Robocop shows`
+        } else if (compAns === 'scissors') {
+            commitText.innerHTML = `${scissorsImg} Robocop shows`
         } else {
             return
         }
     }
 
     winLos = () => {
-        if (x > compAnswer) {
-            console.log("You win")
+        if (x === compAns) {
             uScore++
             userScore.innerHTML = uScore
-            console.log(compAnswer)
-        } else if (x < compAnswer) {
-            console.log("You loss")
+            console.log("You win")
+            console.log("Robot shows: " + compAns)
+        } else if (x !== compAns) {
             cScore++
             compScore.innerHTML = cScore
-            console.log(compAnswer)
+            console.log("You loss")
+            console.log("Robot shows: " + compAns)
         } else {
             console.log("Dead heat")
-            console.log(compAnswer)
+            console.log("Robot shows: " + compAns)
+        }
+    }
+
+    totalWinResult = () => {
+        if (uScore > cScore) {
+            commitText.innerHTML = `You win!!!`
+        } else if (uScore < cScore) {
+            commitText.innerHTML = `You los!!!`
+        } else {
+            commitText.innerHTML = `Dead heat!!!`
         }
     }
 
@@ -107,11 +116,10 @@ function playBegin(x) {
             compColor()
             winLos()
         } else {
-            return
+            return totalWinResult()
         }
     }
 
     checkRounds()
 
 }
-
