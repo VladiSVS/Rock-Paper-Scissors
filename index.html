@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <form action="">
+            <div>
+                <h1>how many rounds?</h1>
+                <div id=rounds>
+                    <div>
+                        <div>
+                            <input type="radio" name="radio" value="5" id="radioFive" checked="checked">
+                            <label for="5" vlaue="5">5</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="radio" value="10" id="radioTen">
+                            <label for="10" vlaue="10">10</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="radio" name="radio" value="15" id="radioFifteen">
+                            <label for="15" vlaue="15">15</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="radio" value="20" id="radioTwenty">
+                            <label for="20" vlaue="20">20</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="countRounds">
+                    <label for="resultRounds" class="count"><span id="attempt">0</span><span>/</span><span
+                            id="totalAttempts">0</span></label>
+                </div>
+            </div>
+            <div>
+                <div><span>USER</span></div>
+                <label for="result" class="count"><span id="userScore">0</span><span>:</span><span
+                        id="compScore">0</span></label>
+                <div><span>COMP</span></div>
+            </div>
+            <div>
+                <h1 id="commitText">Let's play</h1>
+                <div>
+                    <div id="rock" onclick="rockFunc()">
+                        <img src="assets/img/hand-rock-regular.svg">
+                    </div>
+                    <div id="paper" onclick="paperFunc()">
+                        <img src="assets/img/hand-paper-regular.svg">
+                    </div>
+                    <div id="scissors" onclick="scissorsFunc()">
+                        <img src="assets/img/hand-scissors-regular.svg">
+                    </div>
+                </div>
+                <h1>MAKE YOUR MOVE.</h1>
+                <a href="index.html">restart</a>
+            </div>
+        </form>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

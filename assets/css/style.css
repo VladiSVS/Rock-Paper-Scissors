@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+img {
+    width: 3em;
+}
+
+a {
+    color: orange;
+    font-size: 1.2em;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > form > div:nth-of-type(1) {
+    text-align: center;
+    border: 0.3em solid #000;
+    width: 20em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+section > form > div:nth-of-type(1) > h1 {
+    margin: 1em 0;
+}
+
+section > form > div:nth-of-type(1) > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 7em;
+}
+
+section > form > div:nth-of-type(1) > div > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+section > form > div:nth-of-type(2) {
+    height: 7em;
+    border: 0.3em solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+section > form > div:nth-of-type(2) > div {
+    background: red;
+    border: 1.5em solid red;
+    color: #fff;
+    width: 3em;
+}
+
+#countRounds {
+    display: none;
+}
+
+.count {
+    font-size: 4em;
+}
+
+section > form > div:nth-of-type(2) > div:first-of-type {
+    margin-left: -3.2em;
+}
+
+section > form > div:nth-of-type(2) > div:last-of-type {
+    margin-right: -3.2em;
+}
+
+section > form > div:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 20em;
+}
+
+section > form > div:nth-of-type(3) > h1:first-of-type {
+    font-size: 3em;
+}
+
+section > form > div:nth-of-type(3) > h1:last-of-type {
+    font-size: 1.5em;
+}
+
+section > form > div:nth-of-type(3) > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+section > form > div:nth-of-type(3) > div > div {
+    border: 0.8em solid #000;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section > form > div:nth-of-type(3) > div > div:nth-of-type(1):hover {
+    border-color: red;
+    transition: 0.3s;
+}
+
+section > form > div:nth-of-type(3) > div > div:nth-of-type(2):hover {
+    border-color: green;
+    transition: 0.3s;
+}
+
+section > form > div:nth-of-type(3) > div > div:nth-of-type(3):hover {
+    border-color: orange;
+    transition: 0.3s;
+}
+
+
