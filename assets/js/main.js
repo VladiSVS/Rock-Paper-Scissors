@@ -84,18 +84,54 @@ function playBegin(x) {
 
     winLos = () => {
         if (x === compAns) {
-            uScore++
-            userScore.innerHTML = uScore
-            console.log("You win")
-            console.log("Robot shows: " + compAns)
-        } else if (x !== compAns) {
-            cScore++
-            compScore.innerHTML = cScore
-            console.log("You loss")
-            console.log("Robot shows: " + compAns)
-        } else {
             console.log("Dead heat")
+            console.log("User shows: " + x)
             console.log("Robot shows: " + compAns)
+        } else if (x == 'rock') {
+            if (compAns == 'paper') {
+                cScore++
+                compScore.innerHTML = cScore
+                console.log("Los")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
+            else {
+                uScore++
+                userScore.innerHTML = uScore
+                console.log("Win")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
+        } else if (x == 'scissors') {
+            if (compAns == 'rock') {
+                cScore++
+                compScore.innerHTML = cScore
+                console.log("Los")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
+            else {
+                uScore++
+                userScore.innerHTML = uScore
+                console.log("Win")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
+        } else if (x == 'paper') {
+            if (compAns == 'scissors') {
+                cScore++
+                compScore.innerHTML = cScore
+                console.log("Los")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
+            else {
+                uScore++
+                userScore.innerHTML = uScore
+                console.log("Win")
+                console.log("User shows: " + x)
+                console.log("Robot shows: " + compAns)
+            }
         }
     }
 
