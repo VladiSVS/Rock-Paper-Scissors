@@ -63,21 +63,22 @@ function playBegin(x) {
 
     compRandomRes = () => {
         let wordArray = ['rock', 'paper', 'scissors']
-        let randomNumber = Math.floor(Math.random() * wordArray.length)
+        let randomNumber = Math.floor(Math.random() * 3)
         let word = wordArray[randomNumber];
 
         return word;
     }
 
+
     let compAns = compRandomRes()
 
     compColor = () => {
         if (compAns == 'rock') {
-            commitText.innerHTML = `${rockImg} Robocop shows`
+            commitText.innerHTML = `${rockImg} Robot shows`
         } else if (compAns == 'paper') {
-            commitText.innerHTML = `${paperImg} Robocop shows`
+            commitText.innerHTML = `${paperImg} Robot shows`
         } else if (compAns == 'scissors') {
-            commitText.innerHTML = `${scissorsImg} Robocop shows`
+            commitText.innerHTML = `${scissorsImg} Robot shows`
         } else {
             return
         }
