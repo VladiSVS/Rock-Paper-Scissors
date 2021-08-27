@@ -72,11 +72,11 @@ function playBegin(x) {
     let compAns = compRandomRes()
 
     compColor = () => {
-        if (compAns === 'rock') {
+        if (compAns == 'rock') {
             commitText.innerHTML = `${rockImg} Robocop shows`
-        } else if (compAns === 'paper') {
+        } else if (compAns == 'paper') {
             commitText.innerHTML = `${paperImg} Robocop shows`
-        } else if (compAns === 'scissors') {
+        } else if (compAns == 'scissors') {
             commitText.innerHTML = `${scissorsImg} Robocop shows`
         } else {
             return
@@ -84,7 +84,7 @@ function playBegin(x) {
     }
 
     winLos = () => {
-        if (x === compAns) {
+        if (x == compAns) {
             console.log("Dead heat")
             console.log("User shows: " + x)
             console.log("Robot shows: " + compAns)
