@@ -62,9 +62,9 @@ function playBegin(x) {
     }
 
     compRandomRes = () => {
-        let wordArray = ['rock', 'paper', 'scissors'],
-            randomNumber = Math.floor(Math.random() * wordArray.length),
-            word = wordArray[randomNumber];
+        let wordArray = ['rock', 'paper', 'scissors']
+        let randomNumber = Math.floor(Math.random() * wordArray.length)
+        let word = wordArray[randomNumber];
 
         return word;
     }
