@@ -1,6 +1,3 @@
-const rockImg = `<img style="background: red; border: 0.5em solid red;" src="assets/img/hand-rock-regular.svg">`
-const paperImg = `<img style="background: green; border: 0.5em solid green;" src="assets/img/hand-paper-regular.svg">`
-const scissorsImg = `<img style="background: orange; border: 0.5em solid orange;" src="assets/img/hand-scissors-regular.svg">`
 
 let iRounds = 0
 let uScore = 0
@@ -29,6 +26,10 @@ function playBegin(x) {
     let totalAttempts = document.getElementById("totalAttempts")
     let resultAttempt = document.getElementById("attempt")
     let commitText = document.getElementById("commitText")
+
+    let rockImg = `<img style="background: red; border: 0.5em solid red;" src="assets/img/hand-rock-regular.svg">`
+    let paperImg = `<img style="background: green; border: 0.5em solid green;" src="assets/img/hand-paper-regular.svg">`
+    let scissorsImg = `<img style="background: orange; border: 0.5em solid orange;" src="assets/img/hand-scissors-regular.svg">`
 
     let userScore = document.getElementById("userScore")
     let compScore = document.getElementById("compScore")
